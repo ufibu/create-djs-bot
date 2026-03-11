@@ -11,7 +11,7 @@ const program = new Command();
 program
   .name("djs-boilerplate")
   .description("Scaffold a Discord.js bot project")
-  .version("1.0.0")
+  .version("1.0.1")
   .argument("[project-name]", "Name of the project")
   .action(async (projectNameArg?: string) => {
     console.log();
