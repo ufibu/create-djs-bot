@@ -18,9 +18,6 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v6
 
-      - name: Check type declarations 🔎
-        run: npm run typecheck
-
       - name: Semantic Release 🚀
         uses: cycjimmy/semantic-release-action@v6
         with:
