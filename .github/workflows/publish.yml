@@ -1,28 +1,29 @@
-name: Publish to npm
-
-on:
-  push:
-    tags:
-      - "v*"
+name: publish
+on: push
 
 jobs:
-  publish:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-24.04
     permissions:
-      contents: read
+      contents: write
+      issues: write
+      pull-requests: write
       id-token: write
+
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
         with:
-          version: 10
+          node-version: 24
 
-      - uses: actions/setup-node@v4
+      - name: Checkout 🛎
+        uses: actions/checkout@v6
+
+      - name: Check type declarations 🔎
+        run: npm run typecheck
+
+      - name: Semantic Release 🚀
+        uses: cycjimmy/semantic-release-action@v6
         with:
-          node-version: 22
-          registry-url: https://registry.npmjs.org
-
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
-      - run: npm publish --provenance --access public
+          branch: main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
