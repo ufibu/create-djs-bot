@@ -1,3 +1,3 @@
-export { BotClient } from "./client.js";
-export type { SlashCommand, PrefixCommand, GuildMessage } from "./command.js";
-export type { Event } from "./event.js";
+export { BotClient } from "./client";
+export type { SlashCommand, PrefixCommand, GuildMessage } from "./command";
+export type { Event } from "./event";

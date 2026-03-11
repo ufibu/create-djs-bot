@@ -1,7 +1,7 @@
 import path from "path";
 import fs from "fs";
 import { pathToFileURL } from "url";
-import type { BotClient } from "../types/client.js";
+import type { BotClient } from "../types/client";
 
 export async function loadPrefixCommands(client: BotClient): Promise<void> {
   const commandsDir = path.resolve(import.meta.dirname, "..", "commands", "prefix");

@@ -1,8 +1,8 @@
 import "dotenv/config";
 import { GatewayIntentBits, Collection } from "discord.js";
-import { BotClient } from "./types/index.js";
-import { loadEvents } from "./handlers/events.js";
-import { loadHelpers } from "./handlers/helpers.js";
+import { BotClient } from "./types/index";
+import { loadEvents } from "./handlers/events";
+import { loadHelpers } from "./handlers/helpers";
 
 const client = new BotClient({
   intents: [

@@ -1,6 +1,6 @@
 import { Events, Interaction } from "discord.js";
-import type { BotClient } from "../../types/client.js";
-import type { Event } from "../../types/event.js";
+import type { BotClient } from "../../types/client";
+import type { Event } from "../../types/event";
 
 export default {
   name: Events.InteractionCreate,

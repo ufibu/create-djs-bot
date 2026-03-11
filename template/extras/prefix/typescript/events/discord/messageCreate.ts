@@ -1,7 +1,7 @@
 import { Events, Message } from "discord.js";
-import type { BotClient } from "../../types/client.js";
-import type { GuildMessage } from "../../types/command.js";
-import type { Event } from "../../types/event.js";
+import type { BotClient } from "../../types/client";
+import type { GuildMessage } from "../../types/command";
+import type { Event } from "../../types/event";
 
 export default {
   name: Events.MessageCreate,

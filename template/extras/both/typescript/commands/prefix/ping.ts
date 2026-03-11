@@ -1,4 +1,4 @@
-import type { GuildMessage } from "../../types/command.js";
+import type { GuildMessage } from "../../types/command";
 
 export const name = "ping";
 export const description = "Replies with Pong!";

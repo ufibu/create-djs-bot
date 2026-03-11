@@ -1,5 +1,5 @@
 import { Events, ChannelType, Interaction } from "discord.js";
-import type { BotClient } from "../types/client.js";
+import type { BotClient } from "../types/client";
 
 export default function (client: BotClient) {
   client.on(Events.InteractionCreate, async (interaction: Interaction) => {
